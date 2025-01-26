@@ -1,9 +1,9 @@
-defmodule EAlgos.MixProject do
+defmodule Tree.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :e_algos,
+      app: :tree,
       version: "0.1.0",
       elixir: "~> 1.18",
       start_permanent: Mix.env() == :prod,
@@ -14,8 +14,8 @@ defmodule EAlgos.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger]
-      run: [module: EAlgos, function: 
+      extra_applications: [:logger, :observer, :wx],
+      mod: {Tree.Application, []}
     ]
   end
 
